@@ -37,9 +37,9 @@ function BotsPage() {
       setCurrentBot(null);
       const inEnlisted = listedBots.find((bot) => bot.id === botId);
       if(inEnlisted){
-        setlistedBots(prevBots => prevBots.filter((bot) => bot.id !== botId));
+        setlistedBots(priorBots => priorBots.filter((bot) => bot.id !== botId));
       }
-      setBots(prevBots => prevBots.filter((bot) => bot.id !== botId));
+      setBots(priorBots => priorBots.filter((bot) => bot.id !== botId));
     } catch (err) {} finally {
       setIsLoading(false);
     }

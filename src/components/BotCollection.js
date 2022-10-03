@@ -5,8 +5,8 @@ import BotSpecs from "./BotSpecs";
 function BotCollection({ deleteBot, isLoading, allBots, listedBots, setlistedBots, currentBot, setCurrentBot }) {
 
   const addBotToList = (botId, bot) => {
-    const foundEnlistedBot = listedBots.find((bot) => bot.id === botId);
-    if (foundEnlistedBot) {
+    const foundListedBot = listedBots.find((bot) => bot.id === botId);
+    if (foundListedBot) {
       return;
     }
     setlistedBots(prevBots => [...prevBots, bot])
