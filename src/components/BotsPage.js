@@ -16,8 +16,8 @@ function BotsPage() {
         const response = await fetch('http://localhost:8002/bots');
         const responseData = await response.json();
         setBots(responseData);
-      } catch (err) {
-        console.log(err);
+      } catch (error) {
+        console.log(error);
       } finally {
         setIsLoading(false);
       }
